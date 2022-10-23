@@ -1,0 +1,114 @@
+include includes/vars
+include includes/mixins
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    //- include Styles
+    include includes/styles
+    title #{tempName}
+  body
+    //- Start Header
+    header
+      div(class="container top")
+        div.logos
+          //- i made some changes here
+          p Aton 
+            span World
+            img(class="logo" src="./images/logo.png" alt="" srcset="")
+        div.links
+          span.icon
+            span
+            span
+            span
+          ul
+            li
+              a(href="#serv") Services
+            li
+              a(href="#about") About
+            li
+              a(href="#skills") Skills
+            li
+              a(href="#con") Contact
+    //- End Header
+    //- Start Landing Section
+    section
+      div.intro-text
+        h1 Aton World
+        p Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    //- End Landing Section
+    //- Start Feutures
+    div.feutures
+      div.container
+        +feat("fab fa-buffer fa-fw", "Tell Us Your Idea.")
+        +feat("fas fa-campground fa-fw", "We Will Do All The Work.")
+        +feat("fab fa-cloudflare fa-fw", "You Are Not Product.")
+    //- End Feutures
+    //- Start Services
+    div(class="services" id="serv")
+      div.container
+        h2.special-h Services
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        div.service-content
+          +col_service("fa-bity", "fa-battle-net","You Are Not Product 1", "You Are Not Product 2")
+          +col_service("fa-app-store", "fa-500px","You Are Not Product 1", "You Are Not Product 2")
+          div.col
+            div(class="image image-v")
+              img(src="./images/srve.jpg" alt="" srcset="")
+    //- End Services
+    //- Start Portfolio
+    div(class="porto" id="skills")
+      div.container
+        h2.special-h Portfolio
+        p Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        div.porto-content
+          +portfolio_card("p1.jpg", "Project Here")
+          +portfolio_card("p2.jpg", "Project Here")
+          +portfolio_card("p3.jpg", "Project Here")
+    //- End Portfolio
+    //- Start About
+    div(class="about" id="about")
+      div.container
+        h2.special-h About
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        div(class="about-content")
+          .image
+            img(src="./images/about.jpg" alt="")
+          .text
+            p
+              |Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non rem iusto obcaecati est eum vero pariatur accusantium ipsa voluptas debitis
+            hr
+            p
+              |Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non rem iusto obcaecati est eum vero pariatur accusantium ipsa, voluptas debitis
+    //- End About
+    //- Start Contact
+    div(class="contact" id="con")
+      .container
+        h2.special-h Contact
+        p Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        .info
+          p.label Feel Free To Contact Us At
+          a(href="mailto:hanishetos4@gmail.com?subject=Contact" class="link") hanishetos4@gmail.com
+          .social
+            p.soc-txt We Have No Social Btw
+            a(href="#")
+              i(class="fab fa-youtube fa-2x")
+            a(href="#")
+              i(class="fab fa-facebook fa-2x")
+            a(href="#")
+              i(class="fab fa-twitter fa-2x")
+            a(href="#")
+              i(class="fab fa-linkedin-in fa-2x")
+            a(href="#")
+              i(class="fab fa-soundcloud fa-2x")
+    //- End Contact
+    //- Start Footer
+    .footer &copy;2021
+      span AtonWorld 
+      | All Right Reserved Made With Love By
+      span  Hani
+    //- End Footer
+    //- Js Scripts
+    include includes/scripts
