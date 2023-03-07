@@ -1,5 +1,5 @@
-include ../includes/vars
-include ../includes/mixins
+include includes/vars
+include includes/mixins
 doctype html
 html(lang="en")
   head
@@ -7,7 +7,7 @@ html(lang="en")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     //- include Styles
-    include ../includes/styles
+    include includes/styles
     title #{tempName}
   body
     //- Start Header
@@ -114,4 +114,4 @@ html(lang="en")
     button(id='myBtn' title="Go to top") ^
     //- End Footer
     //- Js Scripts
-    include ../includes/scripts
+    include includes/scripts
