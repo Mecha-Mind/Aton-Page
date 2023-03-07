@@ -47,13 +47,15 @@ html {
   text-align: center;
 }
 .special-h + p {
-  /* line-height: 60px; */
   text-align: center;
   color: #979797;
   margin: -30px 0 0;
 }
 
-
+.dark-mode {
+  background-color: black;
+  color: white;
+}
           /* <!-- i made some changes here --> */
 
 header .logos p{
@@ -65,10 +67,13 @@ header .logos p{
   align-items: center;
   color: var(--sec-color);
 }
-header .logo .p span
+/* header .logo .p span */
 /* Start Header */
 header {
-  padding: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1111;
+  background: rgb(255 255 255 /73%);
 }
 header .top {
   display: flex;
@@ -86,15 +91,18 @@ header .top .links .icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 30px;
+  width: 35px;
+  cursor: pointer;
 }
+/*
+//header icon style replaced with js..
 header .top .links:hover .icon span:nth-child(2) {
   width: 100%;
-}
+} */
 header .top .links .icon span {
   background-color: #333;
   margin: 0 0 5px 0;
-  height: 2px;
+  height: 3.5px;
 }
 header .top .links .icon span:first-child {
   width: 100%;
@@ -125,9 +133,9 @@ header .top .links ul::before {
   right: 5px;
   top: -20px;
 }
-header .top .links:hover ul {
+/* header .top .links:hover ul {     //header icon style replaced with js
   display: block;
-}
+} */
 header .top .links ul li a:hover {
   padding-left: 25px;
 }
@@ -445,4 +453,31 @@ section .intro-text h1 {
   font-weight: bold;
   color: var(--mainColor);
 }
+
+.footer #hearting {
+  color: #bd1e1e;
+  display: inline-block;
+  transform: scale(2.2);
+  margin: 0px 10px;
+}
 /* End Footer */
+/* Back to Top Button */
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}

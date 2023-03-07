@@ -21,15 +21,15 @@ html(lang="en")
         div.links
           span.icon
             span
-            span
+            span#mss
             span
           ul
             li
               a(href="#serv") Services
             li
-              a(href="#about") About
-            li
               a(href="#skills") Skills
+            li
+              a(href="#about") About
             li
               a(href="#con") Contact
     //- End Header
@@ -107,8 +107,11 @@ html(lang="en")
     //- Start Footer
     .footer &copy;2021
       span AtonWorld 
-      | All Right Reserved Made With Love By
+      | All Right Reserved Made With
+      p#hearting &hearts;
+      | By
       span  Hani
+    button(id='myBtn' title="Go to top") ^
     //- End Footer
     //- Js Scripts
     include includes/scripts
