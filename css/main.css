@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Work Sans", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 html {
   scroll-behavior: smooth;
@@ -52,10 +52,6 @@ html {
   margin: -30px 0 0;
 }
 
-.dark-mode {
-  background-color: black;
-  color: white;
-}
           /* <!-- i made some changes here --> */
 
 header .logos p{
@@ -67,7 +63,6 @@ header .logos p{
   align-items: center;
   color: var(--sec-color);
 }
-/* header .logo .p span */
 /* Start Header */
 header {
   position: sticky;
@@ -93,12 +88,10 @@ header .top .links .icon {
   justify-content: flex-end;
   width: 35px;
   cursor: pointer;
+  border: none;
+  background: none;
 }
-/*
-//header icon style replaced with js..
-header .top .links:hover .icon span:nth-child(2) {
-  width: 100%;
-} */
+
 header .top .links .icon span {
   background-color: #333;
   margin: 0 0 5px 0;
@@ -133,9 +126,7 @@ header .top .links ul::before {
   right: 5px;
   top: -20px;
 }
-/* header .top .links:hover ul {     //header icon style replaced with js
-  display: block;
-} */
+
 header .top .links ul li a:hover {
   padding-left: 25px;
 }
@@ -151,11 +142,23 @@ header .top .links ul li:not(:last-child) a {
 }
 /* End Header */
 /* Start Landing Section */
-section {
+
+.hero-section {
   background-image: url(../images/landing.jpg);
+  background-position: center;
   background-size: cover;
-  height: calc(100vh - 96px);
+  height: calc(100vh - 76px);
   position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 section .intro-text {
   position: absolute;
@@ -163,12 +166,43 @@ section .intro-text {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  width: 320px;
   max-width: 100%;
+  box-shadow: 0 10px 13px var(--mainColor);
+  backdrop-filter: blur(4px);
+  padding: 0 21px;
+  z-index: 2;
+}
+section .intro-text h1,
+section .intro-text p {
+  position: relative; /* لجعل النص يظهر فوق الـ overlay */
+  z-index: 2; /* للتأكد من أنه يظهر فوق الـ overlay */
 }
 section .intro-text h1 {
-  color: var(--mainColor, #333);
-  line-height: 1.9;
+  font-size: 4em;
+  color: #f1f1f1;
+  text-shadow: 0 2px 15px black;
+  line-height: 1.5;
+}
+
+section .intro-text h1 span {
+  color: #00ffe5;
+}
+
+section .intro-text p {
+  font-size: 2.2em;
+  color: #fafafa;
+  
+}
+@media (max-width: 768px) {
+  section .intro-text h1 {
+    font-size: 3em;
+  }
+  section .intro-text p {
+    
+    font-size: 1.1em;
+    line-height: 1.2;
+  }
+  
 }
 /* End Landing Section */
 /* Start Feutures */
@@ -462,22 +496,23 @@ section .intro-text h1 {
 }
 /* End Footer */
 /* Back to Top Button */
-#myBtn {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 70px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--sec-color);
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 18px;
+  transition: .3s;
 }
 
 #myBtn:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
 }
