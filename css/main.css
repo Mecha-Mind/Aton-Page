@@ -117,16 +117,17 @@ header .top .links ul {
   margin: 0;
   padding: 0;
   min-width: 200px;
-  background-color: #f6f6f6;
+  background-color: #f6f6f685;
+  border: 2px solid var(--mainColor);
   position: absolute;
   right: 0;
-  top: calc(100% + 15px);
+  top: calc(100% + 24px);
   display: none;
 }
 header .top .links ul::before {
   content: "";
   border: 10px solid;
-  border-color: transparent transparent #f6f6f6 transparent;
+  border-color: transparent transparent var(--mainColor) transparent;
   position: absolute;
   right: 5px;
   top: -20px;
@@ -137,7 +138,9 @@ header .top .links ul li a:hover {
 }
 header .top .links ul a {
   text-decoration: none;
-  color: #333;
+  color: var(--mainColor);
+  font-weight: bold;
+  font-size: 1.4em;
   padding: 15px;
   display: block;
   transition: 0.4s;
