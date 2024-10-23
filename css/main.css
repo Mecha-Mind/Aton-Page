@@ -118,7 +118,7 @@ header .top .links ul {
   padding: 0;
   min-width: 200px;
   background-color: #f6f6f685;
-  border: 2px solid var(--mainColor);
+  border: 1px solid var(--mainColor);
   position: absolute;
   right: 0;
   top: calc(100% + 24px);
